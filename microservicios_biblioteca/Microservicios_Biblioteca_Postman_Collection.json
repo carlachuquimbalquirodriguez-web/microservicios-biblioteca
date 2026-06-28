@@ -1,0 +1,16 @@
+{
+  "info": {"name": "Microservicios Biblioteca Digital", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "item": [
+    {"name":"GET Libros","request":{"method":"GET","url":"http://localhost:8081/api/libros"}},
+    {"name":"GET Libro por ID","request":{"method":"GET","url":"http://localhost:8081/api/libros/1"}},
+    {"name":"POST Libro","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"titulo\": \"Arquitectura de Software\",\n  \"autor\": \"Carlos Suarez\",\n  \"editorial\": \"IDAT Press\",\n  \"categoria\": \"Software\",\n  \"precio\": 130.00,\n  \"stock\": 7\n}"},"url":"http://localhost:8081/api/libros"}},
+    {"name":"PUT Libro","request":{"method":"PUT","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"titulo\": \"Spring Boot Actualizado\",\n  \"autor\": \"Juan Perez\",\n  \"editorial\": \"IDAT Press\",\n  \"categoria\": \"Programacion\",\n  \"precio\": 125.00,\n  \"stock\": 20\n}"},"url":"http://localhost:8081/api/libros/1"}},
+    {"name":"DELETE Libro","request":{"method":"DELETE","url":"http://localhost:8081/api/libros/4"}},
+    {"name":"GET Prestamos","request":{"method":"GET","url":"http://localhost:8082/api/prestamos"}},
+    {"name":"GET Prestamo por ID","request":{"method":"GET","url":"http://localhost:8082/api/prestamos/1"}},
+    {"name":"GET Prestamo Detalle Comunicacion","request":{"method":"GET","url":"http://localhost:8082/api/prestamos/1/detalle"}},
+    {"name":"POST Prestamo","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"libroId\": 1,\n  \"nombreCliente\": \"Carlos Daniel Suarez\",\n  \"fechaPrestamo\": \"2026-06-27\",\n  \"fechaDevolucion\": \"2026-07-10\",\n  \"estado\": \"ACTIVO\"\n}"},"url":"http://localhost:8082/api/prestamos"}},
+    {"name":"PUT Prestamo","request":{"method":"PUT","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"libroId\": 2,\n  \"nombreCliente\": \"Carlos Daniel Suarez\",\n  \"fechaPrestamo\": \"2026-06-27\",\n  \"fechaDevolucion\": \"2026-07-12\",\n  \"estado\": \"DEVUELTO\"\n}"},"url":"http://localhost:8082/api/prestamos/1"}},
+    {"name":"DELETE Prestamo","request":{"method":"DELETE","url":"http://localhost:8082/api/prestamos/3"}}
+  ]
+}
